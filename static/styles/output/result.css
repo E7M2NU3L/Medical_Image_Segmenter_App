@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #ffffff;
+    --primaryRGB: rgb(255, 255, 255);
+    --secondary-color: #fa57c1;
+    --secondary-RGB: rgb(250, 87, 193);
+    --third-c: #b166cc;
+    --third-rgb: rgb(177, 102, 204);
+    --fourth-c: #7572ff;
+    --fourth-rgb: rgb(117, 114, 255);
+    --fifth-color: #69a6f9;
+    --fifth-rgb: rgba(105, 166, 249, 0.5);
+}
+
+img {
+    object-fit: cover;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.result-section{
+    height: 100%;
+}
+
+.intro-result{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: calc(100vh - 12vh);
+}
+
+.intro-result .classified img, .intro-result .segmented img {
+    border-radius: 10%;
+    margin-top: 1rem;
+}
+
+.intro-result h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.intro-result h1 span{
+    color: #b166cc;
+}
+
+
+.description{
+    height: 50vh;
+}
+
+
+.description .desc-title{
+    color: #b166cc;
+    font-size: 1.4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-top: 3rem;
+    align-self: center;
+    padding: 0 15px;
+}
+
+.description .desc-content{
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    height: 100%;
+    margin-top: 2rem;
+    align-self: center;
+    padding: 0 30px;
+}
+
+.holder img {
+    margin-bottom: 1.5rem;;
+}
+
+.holder h4{
+    width: 70%;
+}
+
+.deeper-analysis{
+    padding: 0px 20px;
+    height: 100%;
+}
+
+.holder{
+    display: flex;
+    flex-direction: row;
+}
+
+.deeper-analysis img {
+    margin-top: 1rem;
+    border-radius: 15px;
+    height: 30vh;
+}
+
+.deeper-analysis .title h1{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 3px;
+}
+
+.deeper-analysis .title  h1 span{
+    background: linear-gradient(90deg, #7572ff, #69a6f9);
+    background-clip: text;
+    color: transparent;
+}
+
+.deeper-analysis .orig h1, .deeper-analysis .mask h1{
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+}
+
+@media  screen and (max-width: 548px) {
+    .intro-result, .description, .deeper-analysis{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .intro-result .classified img, .intro-result .segmented img {
+        height: 30vh;
+    }
+    .intro-result img:hover {
+        height: 32vh;
+        box-shadow: 2px 5px 5px 3px rgba(105, 166, 249, 0.5);
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) ease-in-out;
+    }
+
+    .deeper-analysis .holder {
+        height: 110vh;
+        display: flex;
+        flex-direction: column;
+    }
+}

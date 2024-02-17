@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Home</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/output/output.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/output/main.css' %}">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="">
+        {% include 'navbar.html'%}
+
+        <section class="hero-section flex items-center justify-evenly">
+            <div class="hero-content">
+                <h1 class="text-4xl font-semibold mt-4">
+                    Empowering <span class="text-[#b166cc] font-bold">Precision Medicine</span> through <span class="text-[#7572ff] font-bold">Advanced Image Analysis</span>
+                </h1>
+                <h2 class="text-2xl font-normal">
+                    Revolutionize Medical Imaging with Our State-of-the-Art Segmentation and Classification Tool
+                </h2>
+                <h4 class="text-xl font-light">
+                    Welcome to Medical Image Segmenter, where cutting-edge technology meets medical expertise. Our platform harnesses the power of UNET and deep neural network classifiers to bring unprecedented accuracy and efficiency to medical image analysis.
+                </h4>
+                <button class="justify-center items-center mb-8 flex w-full ">
+                    <a href="segment/" class="border-1 rounded-lg bg-purple-400 text-[#fff] px-4 py-2 font-semibold hover:font-[bold] hover:text-[#fefedf] hover:bg-purple-700 shadow-lg hover:shadow-purple-600 hover:animate-bounce active:animate-bounce">
+                        Explore Now
+                    </a>
+                </button>
+            </div>
+
+            <div class="hero-img">
+                <img src="{% static 'assets/hero-logo.jpeg' %}" alt="hero-section-logo">
+            </div>
+        </section>
+
+        {% include 'footer.html' %}
+
+        
+</body>
+</html>

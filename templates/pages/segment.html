@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/output/segment.css' %}" />
+</head>
+<body>
+{% include 'navbar.html'%}
+    <section class="form-section" id="form-section">
+        <form action="#" method="post" class="post_image">
+            <section class="file-main">
+            <div>
+            <input type="file" class="file import section" id="file-import">
+            <label for="file-import">
+                <section class="box-upload">
+                    <span>Drag & Drop or Click to Upload</span>
+                    <img src="#" alt="Uploaded Image" id="uploaded-image">
+                </section>
+            </label>
+            </div>
+            </section>
+
+            <button type="submit" class="submit-button">
+            <a href="output/" class= "links bg-gradient-to-tr from-purple-400 via-violet-500 to-blue-600 text-bold hover:shadow-lg hover:shadow-purple-600">Submit</a>
+            </button>
+        </form>
+    </section>
+
+{% include 'footer.html'%}
+
+    <script>
+        const fileInput = document.getElementById('file-import');
+        const uploadedImage = document.getElementById('uploaded-image');
+
+        fileInput.addEventListener('change', function () {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    uploadedImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<head>
+{% load static %}
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/navbar.css' %}">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/output/main.css' %}">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/output/output.css' %}">
+</head>
+
+<body>
+
+<section class="nav-bar flex w-full bg-[#b166cc] relative shadow-lg shadow-slate-300">
+            <nav class="w-full flex justify-around align-center">
+                <div class="logo img-fluid">
+                    <a href="/" >
+                        <img src="{% static 'assets/med_logo.jpg' %}" alt="logo-img" class="rounded-full w-12 h-12 shadow-lg hover:shadow-[#69a6f9] hover:ring-[#7572ff] hover:ring-1 transition-slow" />
+                    </a>
+                </div>
+        
+                <div class="navigate ">
+                    <ul class="nav-links flex justify-around items-center gap-4 my-auto text-[#fff] font-medium">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/segment/">Segmenter</a></li>
+                        <li><a href="/project/">Project</a></li>
+                    </ul>
+                </div>
+        
+                <div class="connect">
+                    <button class="px-4 py-2 border-2 border-purple-500 bg-gradient-to-tr from-[#69a6f9] to-[#7572ff] rounded-lg shadow-lg hover:shadow-lg hover:shadow-purple-900 hover:text-[#fff] hover:font-bold font-semibold text-md">
+                        <a href="#footer">
+                            Contact us
+                        </a>
+                    </button>
+                </div>
+            </nav>
+</section>
+</body>

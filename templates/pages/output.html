@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="{%static 'styles/output/output.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/output/result.css' %}">
+</head>
+<body>
+{% include 'navbar.html' %}
+    <section class="output-section">
+        <div class="intro-result">
+            <main class="classified">
+                <h1 class="classified_title">
+                    <span>Classified</span> Image
+                </h1>
+                <img src="{%static 'assets/med_logo.jpg'%}" class="" />
+            </main>
+    
+            <main class="segmented">
+                <h1 class="segmented_title"><span>Segmented</span> Image</h1>
+                <img src="{%static 'assets/med_logo.jpg'%}"
+                class="" />
+            </main>
+        </div>
+
+        <main class="description">
+            <h2 class="desc-title">
+                Description about the input image
+            </h2>
+            <h5 class="desc-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia veritatis necessitatibus unde suscipit natus, modi quaerat ea itaque quisquam placeat dolores, fuga fugiat minus! Esse voluptates non rem ullam nulla itaque, deleniti, earum aliquid consectetur sint minus tempore unde? Rem natus in nulla explicabo, inventore expedita nisi veniam officia iusto!
+            </h5>
+        </main>
+
+    <div class="deeper-analysis">
+            <main class="title" >
+                <h1>
+                    Further <span>Analytics<span>
+                </h1>
+            </main>
+    <div class="holder">
+
+            <main class="orig">
+                <h1>
+                    Input Image
+                </h1>
+                <h4>
+                    Given input image has been feeded into the UNET DeepNET Model and the results were obtained
+                </h4>
+                <img src="{%static 'assets/hero-logo.jpeg'%}"  alt="" class="orig_img" />
+            </main>
+            <main class="mask">
+                <h1 class="title">
+                    Mask Extracted from the Input Image
+                </h1>
+                <h3>
+                    UNET Segmentation has been succesfully performed in the given input image
+                </h3>
+                <img class="mask-img" src="{%static 'assets/hero-logo.jpeg'%}" alt="" />
+            </main>
+        </div></div>
+        
+
+    </section>
+
+{% include 'footer.html' %}
+</body>
+</html>
