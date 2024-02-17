@@ -16,3 +16,6 @@ def project(request):
 
 def output(request):
     return render(request, "output.html")
+
+def payment(request):
+    return render(request, "payment.html")
