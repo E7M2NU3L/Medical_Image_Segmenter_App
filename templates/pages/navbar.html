@@ -1,14 +1,13 @@
 <head>
 {% load static %}
-<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/navbar.css' %}">
-<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/output/main.css' %}">
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/output/navbar.css' %}">
 <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/output/output.css' %}">
 </head>
 
 <body>
 
 <section class="nav-bar flex w-full bg-[#b166cc] relative shadow-lg shadow-slate-300">
-            <nav class="w-full flex justify-around align-center">
+            <nav class="w-full flex justify-around items-center flex-wrap h-full py-4">
                 <div class="logo img-fluid">
                     <a href="/" >
                         <img src="{% static 'assets/med_logo.jpg' %}" alt="logo-img" class="rounded-full w-12 h-12 shadow-lg hover:shadow-[#69a6f9] hover:ring-[#7572ff] hover:ring-1 transition-slow" />

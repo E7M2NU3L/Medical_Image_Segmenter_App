@@ -10,26 +10,84 @@
 </head>
 <body>
 {% include "navbar.html" %}
-    <section class="project-report h-screen w-full">
+    <section class="project-report h-screen w-full my-8">
         <section class="report-content">
-        <h1>
-            Kideny Tomour Segmentation and Classification
+        <h1 class="text-3xl font-bold flex justify-center items-center font-['Poppins', sans-serif] font-sans" style="margin-left: 1rem;">
+            Kidney Tumour Segmentation and Classification
         </h1>
-        <h3>
-            Team Members
-        </h3>
-        <h4>
-            <ul>
-                <li>Ms. Farthima Shabana B.E IV</li>
-                <li>Ms. Ruth B.E IV</li>
-                <li></li>
-                <li></li>
-            </ul>
-        </h4>
+        <br />
+        <br />
+        <div class="pt-7 flex flex-col justify-around items-center gap-4">
+            <h3 class="pt-5 text-2xl font-semibold">
+                Team Members
+            </h3>
+                <ul class="flex-col justify-around gap-4 items-center text-xl font-semibold">
+                    <li>Ms. Farthima Shabana</li>
+                    <li>Ms. Ruth Angel</li>
+                    <li>Ms. Nirosha</li>
+                    <li>Ms. Samantha</li>
+                </ul>
+            
+        </div>
     </section>
+<br />
+    <main class="report" style="padding: 2rem 1rem;">
+        <h1 class="text-2xl font-bold">
+            Semantic segmentation
+        </h1>
+        <br />
 
-    <main class="report">
+        <h3 class="font-normal">
+            Semantic segmentation, also known as pixel-based classification, is an important task in which we classify each pixel of an image as belonging to a particular class. In GIS, segmentation can be used for land cover classification or for extracting roads or buildings from satellite imagery.
+        </h3>
+        <br />
 
+        <h3>
+            The goal of semantic segmentation is the same as traditional image classification in remote sensing, which is usually conducted by applying traditional machine learning techniques such as random forest and maximum likelihood classifier. Like image classification, there are also two inputs for semantic segmentation.
+        </h3>
+        <br />
+
+        <div>
+            <ul class="flex justify-start pl-2 flex-col h-full gap-2">
+                <li>
+                    An raster image that contains serveral bands,
+                </li>
+                <li>
+                    A label image that contains the label for each pixel.
+                </li>
+            </ul>
+            <img src="{% static 'assets/images.jpeg' %}" alt="unet" />
+            
+        </div>
+
+        <br />
+        <h4 class="font-normal text-sm">
+            There are many semantic segmentation algorithms such as U-net, Mask R-CNN, Feature Pyramid Network (FPN), etc. In this guide, we will mainly focus on U-net which is one of the most well-recogonized image segmentation algorithms and many of the ideas are shared among other algorithms.
+        </h4>
+    </main>
+    
+    <main class="h-full" style="padding: 2rem 1rem;">
+        <h1 class="text-2xl font-semibold">
+            UNET Architecture
+        </h1>
+        <br />
+        <h2 class="font-normal">
+            U-net was originally invented and first used for biomedical image segmentation. Its architecture can be broadly thought of as an encoder network followed by a decoder network. Unlike classification where the end result of the the deep network is the only important thing, semantic segmentation not only requires discrimination at pixel level but also a mechanism to project the discriminative features learnt at different stages of the encoder onto the pixel space.
+        </h2>
+        <br />
+
+        <h4 class="font-normal">
+            
+The encoder is the first half in the architecture diagram (Figure 2). It usually is a pre-trained classification network like VGG/ResNet where you apply convolution blocks followed by a maxpool downsampling to encode the input image into feature representations at multiple different levels.
+        </h4>
+        <div class="justify-center w-full h-full items-center flex">
+        <img src="{% static 'assets/unet.png' %}" alt="unet_architecture" class="w-full h-full hover:shadow-md hover:shadow-blue-400" style="height: 300px; width: 400px; display: flex; align-items: center; justify-content: center;" />
+        </div>
+
+        <br />
+        <h5 class="font-normal mb-8"> 
+The decoder is the second half of the architecture. The goal is to semantically project the discriminative features (lower resolution) learnt by the encoder onto the pixel space (higher resolution) to get a dense classification. The decoder consists of upsampling and concatenation followed by regular convolution operations.
+        </h5>
     </main>
     </section>
 {% include "footer.html" %}

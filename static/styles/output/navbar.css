@@ -1,0 +1,55 @@
+:root{
+    --primary-color: #ffffff;
+    --primaryRGB: rgb(255,255,255);
+    --secondary-color: #fa57c1;
+    --secondary-RGB: rgb(250,87,193);
+    --third-c:#b166cc;	
+    --third-rgb: rgb(177,102,204);
+    --fourth-c: #7572ff;
+    --fourth-rgb:rgb(117,114,255);
+    --fifth-color:#69a6f9;
+    --fifth-rgb: rgba(105,166,249, 0.5);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+}
+
+.nav-bar{
+    position: fixed;
+    height: 12vh;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.navigate ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+}
+
+.navigate ul li a:hover{
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1) ease-in;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-bar nav{
+        position: fixed;
+        margin-bottom: 2rem;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+        height: 100%;
+        padding: 2rem 0;
+    }
+}
