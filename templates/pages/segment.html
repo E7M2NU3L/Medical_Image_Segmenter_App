@@ -9,7 +9,7 @@
 <body>
 {% include 'navbar.html'%}
     <section class="form-section h-full mt-4 mb-4" id="form-section">
-        <form action="#" method="post" class="post_image">
+        <form action="{% url 'output_file' %}" method="GET" class="post_image">
             <section class="file-main">
             <div>
             <input type="file" class="file import section" id="file-import">
